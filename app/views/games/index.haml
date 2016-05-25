@@ -1,0 +1,20 @@
+%h1 Game Index
+
+%table
+  %thead
+    %th Title
+    %th Short description
+    %th Price
+    %th Action
+  %tbody
+    - @games.each do |game|
+      %tr
+        %td= game.title
+        %td
+          %p= game.short_description
+        %td
+          %p= game.price
+        %td
+          = link_to "Show", game_path(game)
+          = link_to "Edit", edit_game_path(game)
+          = link_to "Delete", game_path(game), method: :destroy, confirm: "This will delete the game and it is irreversible"
