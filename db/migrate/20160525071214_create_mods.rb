@@ -5,7 +5,7 @@ class CreateMods < ActiveRecord::Migration[5.0]
       t.text :description
       t.text :short_description
       t.integer :game_id
-      
+
       t.timestamps
     end
   end
